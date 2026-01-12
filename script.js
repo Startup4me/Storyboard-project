@@ -20,7 +20,14 @@ function createAsset(asset) {
     </div>
 
     <div class="asset-body">
-      <p>${asset.asset_description}</p>
+    <div class="asset-content">
+    <p class="asset-description">
+     <span class="description-label">Description:</span>
+      <span class="asset-text">${asset.asset_description}</span>
+      </p> </div>
+
+    <!-- full width border -->
+  <div class="asset-divider"></div>
       ${renderAssetContent(asset)}
     </div>
   `;
