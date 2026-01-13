@@ -53,13 +53,130 @@ function renderAssetContent(asset) {
     `;
   }
 
-  if (asset.asset_content_type === "article") {
-    return `<textarea rows="6" style="width:100%"></textarea>`;
-  }
+  if (asset.asset_content_type === "article_input") {
+    return `<div class="article-input">
+        <label class="field-label">Title</label>
+        <input type="text" class="article-title-input" />
+
+        <label class="field-label">Content</label>
+        <!-- TOOLBAR BOX -->
+        <div class="editor-wrapper">
+        <div class="editor-box">
+        <div class="editor-toolbar">
+          <span>File</span>
+          <span>Edit</span>
+          <span>View</span>
+          <span>Insert</span>
+          <span>Format</span>
+          <span>Tools</span>
+          <span>Table</span>
+          <span>Help</span>
+        </div>
+        <div class="content-toolbar"><img src="assets/icons/content-toolbar.svg" alt="content-toolbar"></div>
+        </div>
+
+        <!-- TEXTAREA BOX -->
+       <textarea class="article-editor"></textarea>
+      </div>
+      </div>
+
+        `;}
+        /* 4SA METHOD */
+        if(asset.asset_content_type === "article_display"){
+          return `
+           <div class="accordion">
+
+        <div class="accordion-item open">
+          <div class="accordion-header">
+            <span class="arrow"> <img src="assets/icons/arrow.svg" alt="arrow"></span>
+            <span>Introduction</span>
+          </div>
+          <div class="accordion-body">
+            <p>The 4SA Method, How to bring an idea into progress?</p>
+              <div class="see-more-wrapper">
+            <button class="see-more">See More</button> </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span class="arrow"> <img src="assets/icons/arrow.svg" alt="arrow"></span>
+            <span>Thread A</span>
+          </div>
+          <div class="accordion-body">
+            <p>
+              How are you going to develop your strategy?
+              Which method are you going to use?
+              What if the project is lengthy?
+            </p>
+            <div class="see-more-wrapper">
+         <button class="see-more">See More</button>
+         </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Example 1</span>
+          </div>
+          <div class="accordion-body">
+            <p>You have a concept, how will you put it into progress?</p>
+          </div>
+        </div>
+
+      </div>
+          `
+        }
+  
 
   if (asset.asset_content_type === "threadbuilder") {
     return `
-      <input type="text" placeholder="Enter your thread here" style="width:100%; padding:8px" />
+     
+  <div class="threadbuilder">
+    <!-- Thread Header -->
+     <div class="thread-header">
+     <span class="thread-arrow"><img src="assets/icons/arrow.svg" alt="arrow"></span>
+     <span class="thread-title">Thread A</span>
+  </div>
+
+  <!-- Thread Body -->
+   <div class="thread-body">
+
+    <div class="thread-inputs">
+      <div class="input-card">
+        <label>Sub thread 1</label>
+        <textarea placeholder="Enter Text here"></textarea>
+      </div>
+       <div class="input-card">
+         <label>Sub Interpretation 1</label>
+        <textarea placeholder="Enter Text here"></textarea>
+       </div>
+    </div>
+
+    <!-- Icons row -->
+     <div class="thread-icons">
+      <span><img src="assets/icons/thread-icon.svg" alt="thread-icons"></span>
+     
+
+     <select >
+      <option >Select Categ</option>
+     </select>
+     <select >
+      <option >Select Process</option>
+     </select>
+       </div>
+
+     <!-- Add sub thread -->
+      <button class="add-thread">+ Sub-thread</button>
+
+      <!-- Summary -->
+       <div class="summary">
+        <label>Summary for Thread A</label>
+        <textarea placeholder="Enter Text Here"></textarea>
+       </div>
+   </div>
+  </div>
+  
     `;
   }
 

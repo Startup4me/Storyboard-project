@@ -30,16 +30,18 @@ const projectData = {
             "Write a 400-500 word article, from your thread. Publish your understanding.",
          asset_content: "",
           asset_type: "input_asset",
-          asset_content_type: "article"
+          asset_content_type: "article_input"
         },
         {
           asset_id: 18886,
           asset_title: "4SA Method",
           asset_description: "To explore more read more",
           asset_content:
-            "https://dtthon.deepthought.education/sharer?id=01aa3cff-db8e-8d9d-afc0-1671715937878",
+            "https://dtthon.deepthought.education/sharer?id=01aa3cff-db8e-8d9d-afc0-1671715937878"
+            // Above link is not working so, I statically put the text for this
+            ,
           asset_type: "display_asset",
-          asset_content_type: "article"
+          asset_content_type: "article_display"
         }
       ]
     }
