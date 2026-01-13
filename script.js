@@ -55,10 +55,10 @@ function renderAssetContent(asset) {
 
   if (asset.asset_content_type === "article_input") {
     return `<div class="article-input">
-        <label class="field-label">Title</label>
-        <input type="text" class="article-title-input" />
+        <label for="title" class="field-label">Title</label>
+        <input id="title" type="text" class="article-title-input" />
 
-        <label class="field-label">Content</label>
+        <label for="content" class="field-label">Content</label>
         <!-- TOOLBAR BOX -->
         <div class="editor-wrapper">
         <div class="editor-box">
@@ -76,7 +76,7 @@ function renderAssetContent(asset) {
         </div>
 
         <!-- TEXTAREA BOX -->
-       <textarea class="article-editor"></textarea>
+       <textarea id="content" type="text" class="article-editor"></textarea>
       </div>
       </div>
 
@@ -144,12 +144,12 @@ function renderAssetContent(asset) {
 
     <div class="thread-inputs">
       <div class="input-card">
-        <label>Sub thread 1</label>
-        <textarea placeholder="Enter Text here"></textarea>
+        <label for="text">Sub thread 1</label>
+        <textarea id="text" type="text" placeholder="Enter Text here"></textarea>
       </div>
        <div class="input-card">
-         <label>Sub Interpretation 1</label>
-        <textarea placeholder="Enter Text here"></textarea>
+         <label for="Interpretation">Sub Interpretation 1</label>
+        <textarea id="Interpretation" type="text" placeholder="Enter Text here"></textarea>
        </div>
     </div>
 
