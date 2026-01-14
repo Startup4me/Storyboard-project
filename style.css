@@ -424,6 +424,90 @@ font-weight: 400;
   gap: 6px;
   cursor: pointer;
 }
+/*Journey board*/
+.journey-wrapper {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  z-index: 1000;
+}
+.journey-board{
+  position: relative;
+  width: 260px;
+  height: 360px;
+ background: #FDFDFD;
+ box-shadow: 0px 1px 1px 0px #00000040;
+ border-radius: 16px;
+
+
+ transform: translateX(-204px); /* 👈🏻 partially hidden*/
+ transition: transform 0.3s ease;
+}
+.jb-content {
+  height: 100%;
+  background: #FDFDFD;
+  border-radius: 0 16px 16px 0;
+  box-shadow: 0px 1px 6px rgba(0,0,0,0.4);
+  overflow: hidden; /* ✅ only content clipped */
+}
+
+/*Expand*/
+.journey-board:not(.collapsed){
+  transform: translateX(0);
+}
+
+/*Header*/
+.jb-header{
+  height: 44px;
+  background:#000000;
+  color: #fff;
+    justify-content: space-between; /*IMP*/
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+}
+/* Hide title when collapsed */
+.journey-board.collapsed .jb-title{
+  display:flex ;
+}
+
+/* Toggle arrow */
+.jb-toggle{
+  top: 8px;
+  background: none;
+  border: none;
+ cursor: pointer;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ transition: transform 0.3s ease;
+}
+/* Rotate arrow when expanded*/
+.journey-board:not(.collapsed) .jb-toggle{
+  transform: rotate(180deg);
+}
+
+/* Body */
+.jb-body {
+  padding: 16px;
+}
+
+/* Hide body when collapsed */
+.journey-board.collapsed .jb-body {
+  display: none;
+}
+
+/* List */
+.jb-body ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.jb-body li {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+/*Notice bar*/
 .notice-wrapper {
   position: fixed;
   top: 20%;

@@ -5,7 +5,13 @@ document.getElementById("task-title").innerText = task.task_title;
 document.getElementById("task-description").innerText = task.task_description;
 
 const assetsContainer = document.getElementById("assets-container");
+/* Journey board arrow toggle */
+const board =document.getElementById("journeyBoard");
+const toggleBtn =document.getElementById("jbToggle");
 
+toggleBtn.addEventListener("click", ()=>{
+  board.classList.toggle("collapsed");
+})
 /* 🔁 REUSABLE COMPONENT */
 function createAsset(asset) {
   const assetDiv = document.createElement("div");
