@@ -8,7 +8,21 @@ const assetsContainer = document.getElementById("assets-container");
 /* Journey board arrow toggle */
 const board =document.getElementById("journeyBoard");
 const toggleBtn =document.getElementById("jbToggle");
+const title = board.querySelector(".jb-title");
+const body = board.querySelector(".jb-body");
 
+/* ---- Add text ---- */
+title.textContent = "Journey Board";
+
+body.innerHTML = `
+  <ul>
+    <li class="highlight">Explore the world of management</li>
+    <li>Technical Project Management</li>
+    <li>Threadbuilder</li>
+    <li>Structure your pointers</li>
+    <li>4SA Method</li>
+  </ul>
+`;
 toggleBtn.addEventListener("click", ()=>{
   board.classList.toggle("collapsed");
 })
